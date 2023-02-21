@@ -1,13 +1,11 @@
 <h1><%= @place["name"] %></h1>
 
-
-<ul>
   <% for post in @posts %>
-    <li><%= post["title"] %>, <%= post["description"] %>, <%= post["date"] %></li>
+    <div class="col-3">
+      <h4><%= post["title"] %></h4>
+      <p><%= post["description"] %></p>
+      <p><%= post["posted_on"] %></p>
+    </div>
   <% end %>
-</ul>
 
-<p>
-  <a href="/posts/new">New Post</a>
-</p>
-  
+  <p><a href="/posts/new">New Post</a></p>
